@@ -11,7 +11,9 @@
 
 # Overview
 
-Sooty is a tool developed with the task of aiding SOC analysts with automating part of their workflow. One of the goals of Sooty is to perform as many of the routine checks as possible, allowing the analyst more time to spend on deeper analysis within the same time-frame. Details for many of Sooty's features can be found below.
+~~Sooty~~ Footy is a tool developed with the task of aiding SOC analysts with automating part of their workflow. One of the goals of ~~Sooty~~ Footy is to perform as many of the routine checks as possible, allowing the analyst more time to spend on deeper analysis within the same time-frame. Details for many of ~~Sooty's~~ Footy's features can be found below.
+
+### If it's not clear yet Footy is a Forked-Sooty. Sooty appeared abandoned and I wanted to update many many sneks
 
 Sooty is now proudly supported by [Tines.com](https://tines.com?utm_source=github&utm_medium=sponsorship&utm_campaign=sooty)! The SOAR Platform for Enterprise Security Teams.
 
