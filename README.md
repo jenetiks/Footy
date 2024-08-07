@@ -34,10 +34,10 @@ Sooty is now proudly supported by [Tines.com](https://tines.com?utm_source=githu
   - Perform reverse DNS and DNS lookups
   - Perform reputation checks from:
     - [VirusTotal](https://www.virustotal.com)
-    - [BadIP's](https://www.badips.com/)
+    - ~[BadIP's](https://www.badips.com/)~
     - [Abuse IPDB](https://www.abuseipdb.com/)
   - Identify if an address is potentially malicious, used for spam, web bots:
-    - [Botvrij.eu](https://botvrij.eu)
+    - ~[Botvrij.eu](https://botvrij.eu)~
     - [myip.ms](https://myip.ms)
     - [Firehol](https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/nixspam.ipset)
   - Check if an IP address is a TOR exit node
@@ -101,7 +101,7 @@ Sooty is now proudly supported by [Tines.com](https://tines.com?utm_source=githu
 ![](readmeimages/email_analysis.gif)
 
 ## Requirements and Installation
- - [Python 3.x](https://www.python.org/)
+ - [Python 3.12](https://www.python.org/)
  - Install all dependencies from the requirements.txt file. `pip install -r requirements.txt`
  - Launch the tool by navigating to the main directory, and executing with `python Sooty.py`, or simply `Sooty.py` 
  - Several API Keys are required to have full functionality with Sooty. However, it will still function without these keys, just without the added functionality they provide. Links are found below:
@@ -116,8 +116,8 @@ Sooty is now proudly supported by [Tines.com](https://tines.com?utm_source=githu
  
 ![](readmeimages/example_config.png)
 
-## Launch with Docker
-- docker build -t sooty . && docker run --rm -it sooty 
+## Launch with Docker {eventually fixing}
+- ~docker build -t sooty . && docker run --rm -it sooty~
  
  <!-- - To use the Hash comparison with VirusTotal requires an [API key](https://developers.virustotal.com/reference), replace the key `VT_API_KEY` in the code with your own key. The tool will still function without this key, however this feature will not work.
  - To use the Reputation Checker with AbuseIPDB requires an [API Key](https://www.abuseipdb.com/api), replace the key `AB_API_KEY` in the code with your own key. The tool will still function without this key, however this feature will not work.
@@ -128,72 +128,25 @@ Sooty is now proudly supported by [Tines.com](https://tines.com?utm_source=githu
 
 ### Want to contribute? Great!
 
-  #### Code Contributions
-  - If you wish to work on a feature, leave a comment on the issue page and I will assign you to it.
-  - Under the projects tab is a list of features that are waiting to be started / completed. 
-  - All code modifications, enhancements or additions must be done through a pull request. 
-  - Once reviewed and merged, contributors will be added to the ReadMe.
-
 ### Found a Bug? Show Me!
 
  #### Bugs and Issues
  - If an issue / bug is found, please open a ticket in the issue tracker and use the bug report template. Fill in this template and include any additional relevant information.
- - If you wish to work on a known bug, leave a comment on the issue page and open a Pull Request to track progress. I will assign you to it.
- - If there is an issue with installation or usage, use the supplied template and I will respond ASAP.
 
  #### Requesting Features
- - New features / requests should start by opening an issue. Please use the accompanying template when creating a new issue. This helps track new features and prevent crossover. Attach any additional info that seems relevant if necessary. Before creating a new issue, please check the [Projects Tab](https://github.com/TheresAFewConors/Sooty/projects) to see if this issue has already been requested, or directly with the other open [issues.](https://github.com/TheresAFewConors/Sooty/issues)
+ - Open to requests but main forcus for a bit will be fixing outdated and broken functionality!
  
 ## Changelog
 
-
-#### Version 1.3 - The Templating Update
- - Added first iteration of dynamic email templates that generate based on Sooty's analysis, example below:
-![](readmeimages/templateGen.PNG)
-- Docker Image added
-- Unfurl added 
-
-#### Version 1.2 - The Phishing Update
- - Added first iteration of the Phishing tool.
- - Able to analyze an email (outlook / .msg only tested at the moment) and retrieve emails, urls (Proofpoint decode if necessary) and extract info from headers. 
- - Extract IP's from body of email.
- - Reputation check on sender of email, and provide enriched information.
-
-#### Version 1.1 - The Reputation Update
- - Improved Rep Checker
- - Added HaveIBeenPwned Functionality
- - Added DNS Tools and WhoIs Functionality
- - Added Hash and VirusTotal Checkers
- - Added Abuse IPDB, Tor Exit Node, BadIP's to Reputation Checker
- 
-#### Version 1.0
- - Initial Release
- - URL and Proofpoint Decoder
- - Initial implementation of Reputation Checker
- - Sanitize links to be safe for email
+#### Version 0.1
+ - Initial Fork
+ - Documentation updates
 
 
 
 ## Roadmap
-  This is an outline of what features *will* be coming in future versions.
-  
-#### Version 1.2 - The Phishing Update
-  - Scan email attachments for malicious content, macros, files, scan hashes, etc.
 
-#### Version 1.3 - The Templating Update
- - ~~Add dynamic email templates that generate based on Sooty's analysis.~~ Edit: Added
- - Verify MX Records
- - Perform DKIM Verification
-
-#### Version 1.4 - The PCAP Analysis Update
-- Add ability to analyze .pcap files and provide concise, enriched information.
-
-#### Version 1.x - The Case Update
-  - Add a 'New Case' Feature, allowing output of the tool to be output to a txt file.
-
-
-
-## Contributors:
+## Contributors (Kept from pre-fork Sooty):
 
 #### Code Contributions:
  - [Aaron J Copley](https://github.com/aaronjcopley) for his modified version of [ProofPoint's code](https://files.mtstatic.com/site_6638/177/1?Expires=1570188425&Signature=QWXGWsG0AID7Nyilm8i3vL9ETfRVPCnSmGZA5RtEAPUduQ38Mxh1ReqY6vk-PSLfnPoF6YY76jLUUokZP1gnXSyLTyKIzsiS15f5k1IgY~kwZbekQ6wvMLqPTlM3RjxJbm~iLbPE9qg9W8aX09QhBganS91SwISCPrdJJRJnMko_&Key-Pair-Id=APKAJ5Y6AV4GI7A555NA) to decode ProofPoint URL's
