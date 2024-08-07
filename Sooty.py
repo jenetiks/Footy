@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
-    Title:      Sooty
+    Title:      Footy
     Desc:       The SOC Analysts all-in-one CLI tool to automate and speed up workflow.
-    Author:     Connor Jackson
-    Version:    1.3.2
-    GitHub URL: https://github.com/TheresAFewConors/Sooty
+    OG Author:  Connor Jackson
+    Fauther:    Jenetiks
+    Version:    0.1
+    GitHub URL: https://github.com/jenetiks/Footy
 """
 
 import base64
@@ -20,7 +21,7 @@ import socket
 import strictyaml
 import urllib.parse
 import requests
-from ipwhois import IPWhois
+import whois 
 import tkinter
 import sys
 
@@ -34,7 +35,7 @@ try:
 except:
     print('Cant install Win32com package')
 
-versionNo = '1.3.2'
+versionNo = '0.1'
 
 try:
     f = open("config.yaml", "r")
@@ -94,7 +95,7 @@ def dnsSwitch(choice):
     if choice == '2':
         dnsLookup()
     if choice == '3':
-        whoIs()
+        whois()
 
     if choice == '0':
         mainMenu()
