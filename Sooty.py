@@ -3,7 +3,7 @@
     Title:      Footy
     Desc:       The SOC Analysts all-in-one CLI tool to automate and speed up workflow.
     OG Author:  Connor Jackson
-    Fauther:    Jenetiks
+    Author:     Jenetiks (Dan)
     Version:    0.1
     GitHub URL: https://github.com/jenetiks/Footy
 """
